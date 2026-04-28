@@ -29,7 +29,7 @@ class SessionController extends Controller
 
         session()->regenerate();
 
-        return redirect()->route('home')->with('success', '`You are logged in!');
+        return redirect()->intended('/')->with('success', 'You are logged in!');
     }
 
     public function destroy()
