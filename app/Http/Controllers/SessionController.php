@@ -36,6 +36,6 @@ class SessionController extends Controller
     {
         Auth::logout();
 
-        return redirect()->route('home')->with('success', 'Logout successful!');
+        return redirect()->route('login')->with('success', 'Logout successful!');
     }
 }

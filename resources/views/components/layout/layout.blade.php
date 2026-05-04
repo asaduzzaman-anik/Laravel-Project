@@ -15,9 +15,12 @@
     <main class="max-w-7xl mx-auto px-6 py-10">
         {{ $slot }}
     </main>
-    <footer>
-
-    </footer>
+    @session('success')
+        <div x-data="{ open: true }" x-init="setTimeout(() => open = false, 3000)" x-show="open" x-transition.opacity.duration.500ms
+            class="absolute bottom-4 right-4 p-2 mb-2 rounded-lg bg-primary">
+            {{ $value }}
+        </div>
+    @endsession
 </body>
 
 </html>
